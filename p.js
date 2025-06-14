@@ -15,7 +15,8 @@ let searchMood = "title";
 let updatenum = 0 ;
 console.log(title,price,ads,discount,total , count , submit, category , taxes);
 window.onload = function(){ 
-    if(localStorage.product != '' ||localStorage.product != undefined ){
+    if(localStorage.product != '' &&localStorage.product != undefined ){
+     
     showData(); 
 }else{
     localStorage.product = JSON.stringify([])
@@ -118,6 +119,7 @@ function clearinputs(){
 
 // read 
 function showData(){ 
+    
     let table = document.querySelector("#tbody");
     table.innerHTML = '';
     let tr =  document.createElement("tr");
